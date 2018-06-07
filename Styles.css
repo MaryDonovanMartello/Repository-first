@@ -1,0 +1,275 @@
+<style>
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Luckiest+Guy|Titan+One');
+</style>
+
+*{
+    box-sizing: border-box;
+}
+
+nav, footer {
+    display: inline-block;
+    font-family: "Century Gothic", Tahoma, "Lucida Grande", Arial, sans-serif;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+p, div {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/*colors*/
+.main, .aside, .saleMenu, .formSection, .form {
+  background-color: darkblue;
+}
+
+.innerBox, .saleItems, .submit {
+  background-color: #009900;
+}
+
+.asideBox, .item, .radioForm {
+  background-color: lightblue;
+}
+
+.footer, .link, .form {
+  color: white;
+}
+
+.menu{
+
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+.link {
+  float: left;
+  width: calc((100% / 3) - .25px);
+  height: 30px;
+  background-color: blue;
+  padding-top: 10px;
+
+}
+
+.link.active{
+  background-color: darkblue;
+}
+
+.link:not(.active):hover{
+    background-color: purple;
+
+  }
+
+  .main {
+
+    float: left;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 31px;
+
+  }
+
+  .innerBox {
+    width: 100px;
+    min-height: 125px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc((100% / 3) - 2px);
+    margin: 1px;
+  }
+
+    .aside {
+    float: right;
+    width: calc(25% - 20px);
+    padding: 0 10px 0 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 31px;
+    }
+
+    .asideBox {
+      width: 99%;
+      min-height: 80px;
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: calc(100% / 3);
+      margin: 1px;
+    }
+
+    .saleMenu {
+
+      float: left;
+      width: 110px;
+      margin-top: 31px;
+      margin-left: 10px;
+      font-family: 'Alfa Slab One', cursive;
+      font-family: 'Luckiest Guy', cursive;
+      font-family: 'Titan One', cursive;
+    }
+
+    .saleMenu .innerBox {
+      min-height: 25px;
+      padding-left: 10px;
+
+    }
+
+    .saleItems {
+      float: right;
+      width: calc(100% - 130px);
+      margin-left: -5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 31px;
+    }
+
+    .item {
+      width: 99%;
+      min-height: 125px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: calc((100% / 2) - 22px);
+      margin: 1px;
+      padding: 10px;
+      text-align: justify;
+
+    }
+
+    .img {
+      float: left;
+      margin: 10px;
+      width:75px;
+      height:75px;
+      max-width: 25%;
+
+    }
+
+    .img:hover {
+      -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+      transform: scale(2);
+    }
+
+    .form {
+    font-size: 120%;
+    border: 1px solid green;
+    border-radius: 5px;
+    padding: 5px 5px 5px 30px;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 39px;
+  }
+  .textForm {
+    display: block;
+    min-height: 200px;
+  }
+  .radioForm {
+    display: inline;
+    border: 5px solid green;
+    padding-right: 100px;
+    color: black;
+
+  }
+  .legend {
+    margin-top: 15px;
+  }
+
+  .comment{
+    vertical-align: top;
+  }
+  textarea{
+    width: 900px;
+    height: 150px;
+  }
+
+  .submit {
+    text-align: center;
+    color: black;
+    text-shadow: 0px 1px 1px purple;
+    border-bottom: 2px solid purple;
+    width: 250px;
+    float: right;
+    margin-left: 500px;
+
+  }
+  .footer {
+
+    width: 100%;
+    height: 100px;
+    background-color: #4b0082;
+    clear: both;
+    padding-top: 10px;
+    display: block;
+  }
+  .footerImg {
+    height: 75px;
+    margin: 0px;
+    display: inline-block;
+
+  }
+  footer p {
+    display: inline-block;
+  }
+
+.center {
+  text-align: center;
+}
+
+
+
+@media(min-width: 1200px){
+
+  .asideBox {
+    width: 75%;
+  }
+}
+
+  @media(max-width: 780px){
+    .aside {
+      float: none;
+      width: auto;
+      clear: both;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      padding: 10px 0 10px 5px;
+      flex-direction: row;
+    }
+
+    .asideBox {
+      
+      flex-grow: 1;
+    }
+
+    .main {
+      width: auto;
+    }
+
+    .footer {
+      clear: both;
+    }
+
+    .innerBox {
+      flex-basis: calc((100% / 2) - 2px);
+    }
+
+    .item {
+      flex-basis: calc((100% / 1) - 2px);
+    }
+
+  }
+
+  @media(max-width: 480px){
+    .innerBox {
+      flex-basis: calc((100% / 1) - 2px);
+    }
+    }
